@@ -1,24 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppShell, ColorSchemeProvider, MantineProvider } from '@mantine/core';
+import { useState } from 'react';
+import './App.scss';
+import HeaderWithSearch from "./components/Header";
+import Home from './pages/Home/Home';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HtmlPage from './pages/Html/HtmlPage';
+import JavascriptPage from './pages/Javascript/JavascriptPage';
+import CssPage from './pages/Css/CssPage';
+import ReactPage from './pages/React/ReactPage';
+
 
 function App() {
+
+    const [colorScheme, setColorScheme] = useState("dark");
+    const toggleColorScheme = () =>
+      setColorScheme(colorScheme === "light" ? "dark" : "light");
+
+
+
+  const router = createBrowserRouter([
+
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/html",
+          element: <HtmlPage />,
+        },
+        {
+          path: "/css",
+          element: <CssPage />,
+        },
+ 
+    {
+      path: "/javascript",
+      element: <JavascriptPage />,
+    },
+    {
+      path: "/react",
+      element: <ReactPage />,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{colorScheme,}}
+      >
+        <AppShell
+          className="App"
+          padding="md"
+          // navbar={<Navbar height={500} p="xs" />}
+          header={<HeaderWithSearch height={60} p="xs" />}
+          styles={(theme) => ({
+            main: {
+              backgroundColor:
+                theme.colorScheme === "dark"
+                  ? theme.colors.dark[8]
+                  : theme.colors.gray[0],
+            },
+          })}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <RouterProvider router={router} />
+        </AppShell>
+      </MantineProvider>
+    </ColorSchemeProvider>
   );
 }
 

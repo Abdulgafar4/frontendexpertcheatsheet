@@ -1,0 +1,201 @@
+.App {
+    .navbar {
+       display: flex;
+       margin-top: 90px;  
+       width: 200px; 
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+    }
+
+    .htmlFlex {
+        gap: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+    }
+
+    .html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+
+        .htmlfirstdiv {
+         margin-bottom: 10%;
+        }
+    }
+
+    .cssFlex {
+        gap: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+    }
+
+    .css {
+        gap: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+
+        .cssfirstdiv {
+         margin-bottom: 10%;
+        }
+    }
+
+    .javascriptFlex{
+        margin-left: 130px;
+        gap: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+    }
+
+    .javascript{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+
+        .javascriptfirstdiv {
+         margin-bottom: 10%;
+        }
+    }
+
+    .reactFlex{
+        margin-left: 100px;
+        gap: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin:10% 0 15% 0;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+    }
+
+    .react{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        :last-child {
+            line-height: 1.55;
+            border-radius: 4px;
+            color: rgb(26, 27, 30);
+            background-color: rgb(248, 249, 250);
+            font-size: 12px;
+            padding: 30px;
+            border: 2px solid #f1f3f5;
+        }
+
+        .reactfirstdiv {
+         margin-bottom: 10%;
+        }
+    }
+
+    .link{
+        &:hover{
+           text-decoration: none;
+        }
+    }
+
+   .htmlpagewrapper{
+    display: flex;
+
+   }
+}
